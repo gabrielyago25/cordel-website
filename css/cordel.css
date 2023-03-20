@@ -5,12 +5,12 @@
     padding: 0;
 }
 
-body {
-    
+html, body {
+    min-height: 100vh; /* ou 100%, mesma coisa */
+    background-color: darkgray;
 }
 
 header {
-    height: 277px;
     background-color: black;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,13 +19,52 @@ header {
 }
 
 header > h1 {
-    padding-top: 70px;
+    padding-top: 50px;
+    font-variant: small-caps; /* text-transform: uppercase; */
 }
 
 header > p {
-    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
-header a:visited {
+header a:visited, footer a:visited {
     color: white;
+}
+
+header a, footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh; /* ou 10% */
+    padding-bottom: 10vh; /* ou 10% */
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+section.text-normal {
+    background-color: white;
+    color: black;
+}
+
+section.text-image {
+    background-color: rgb(97, 96, 96);
+    color: white;
+}
+
+section.text-image > p {
+    background-color: rgba(0, 0, 0, 0.429);
+    width: 400px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
